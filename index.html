@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Day Post</title>
+    <link rel="stylesheet" type="text/css" href="style.css" </head>
+
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profile_img">
+                    <img src="img/1.png" class="cover" alt="foto do perfil">
+                </div>
+                <h3>Science_Day<br><span>SP, Brazil</span></h3>
+            </div>
+            <div>
+                <img src="img/bolinhas.svg" class="dot" alt="menu opitions">
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="img/2.png" class="cover" alt="imagem do post">
+        </div>
+        <div class="actionBtns">
+            <div class="left">
+                <img src="img/coracaovazio.svg" class="heart" onclick="likeButton()" alt="botão do like">
+                <img src="img/bate-papo.png" alt="comentar">
+                <img src="img/aviao.png" alt="compartilhar">
+            </div>
+            <div class="right">
+                <img src="img/bandeira.png" alt="guardar post">
+            </div>
+        </div>
+        <h4 class="likes">5,764 likes</h4>
+        <h4 class="message"><b>Science_Day</b> Para mais informações de uma olhada no nosso feed
+            <span>#savetheplanet</span><span>#biologia</span><span>#sustentavel</span>
+        </h4>
+        <h4 class="comments">Ver todos os 245 comentarios</h4>
+        <div class="addComments">
+            <div class="userImg">
+                <img src="img/usuario.svg" class="cover" alt="imagem do usuario">
+            </div>
+            <input type="text" class="text" placeholder="Comentar...">
+        </div>
+        <h5 class="postTime">4 horas atrás</h5>
+    </div>
+    <script>
+        function likeButton() {
+            let heart = document.querySelector('.heart');
+            let likes = document.querySelector('.likes')
+            if (heart.src.match("img/coracaovazio.svg")) {
+                heart.src = "img/coraçãocheio.svg";
+                likes.innerHTML = "5,765 likes";
+            }
+            else {
+                heart.src = "img/coracaovazio.svg";
+                likes.innerHTML = "5,764 likes";
+            }
+        }
+    </script>
+</body>
+
+</html>
